@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>homePage</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/home/home.css" rel="stylesheet" />
+    <script src="/pages/home/home.js"></script>
+</head>
+<body>
+    <div class="homePage">
+        <div class="left">
+            <h1>Movie</h1>
+            <br />
+            <br />
+            <h3>Select a movie</h3>
+            <br />
+            <div id="movieTemplate" data-win-control="WinJS.Binding.Template">
+                <div style="margin-right: 5px;">
+                    <img data-win-bind="src: image" src="#" style="width: 214px; height: 317px" />
+                    <div data-win-bind="innerText: title" style="text-align: center;"></div>
+                </div>
+            </div>
+            <div id="MoviesListView" data-win-control="WinJS.UI.ListView"
+                 data-win-options="{itemTemplate: select('#movieTemplate')}"
+                 style="width: 90%; height: 800px;">
+            </div>
+            <br />
+        </div>
+        <div id="RatingContainer" style="width: 428px; margin: 50px;">
+            <h2 id="RatingSpan">Not Rated</h2>
+            <br />
+            <img id="RatingImage" width="428"/>
+            <br/>
+            <div id="Description" style="width: 100%; font-size: 25px;"></div>
+            <label>Rate this movie:</label>
+            <div id="RatingControl" data-win-control="WinJS.UI.Rating"></div>
+            <br />
+            <button id="SubmitButton">Submit</button>
+            <button id="Fullscreen">View fullscreen</button>
+        </div>
+    </div>
+</body>
+</html>

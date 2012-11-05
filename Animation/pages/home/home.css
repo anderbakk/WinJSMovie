@@ -1,0 +1,39 @@
+﻿.homePage {
+    margin-left: 20px;
+}
+
+.left {
+    float: left;
+    width: 50%;
+}
+
+#RatingContainer {
+    float: right;
+    width: 50%;
+    text-align: center;
+    visibility: hidden;
+    font-size: 30pt;
+    color: #e6e6e6;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#RatingContainer:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .homepage section[role=main] {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (-ms-view-state: portrait) {
+    .homepage section[role=main] {
+        margin-left: 100px;
+    }
+}
